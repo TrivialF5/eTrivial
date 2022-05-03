@@ -1,9 +1,9 @@
 <script setup>
-import Question from './components/Questions.vue'
+  import SelectCategory from './components/SelectCategory.vue'
 </script>
 
 <template>
-  <div>
-    <Question />
+  <div class="font-pop">
+    <SelectCategory name="sports" />
   </div>
 </template>
