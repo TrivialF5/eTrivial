@@ -49,7 +49,7 @@ export default {
       return `flex items-center gap-4 overflow-hidden text-xl font-bold rounded-md h-14 ${this.classesBack}`;
     },
     mergeClassesFront() {
-      return `flex items-center justify-center bg-orange-500 h-14 w-14 ${this.classesFront}`;
+      return `flex items-center justify-center h-14 w-14 ${this.classesFront}`;
     },
   }
 }
