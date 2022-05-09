@@ -1,9 +1,9 @@
 <script setup>
-import Category from './views/Category.vue';
+import Questions from './components/Questions.vue';
 </script>
 
 <template>
   <div class="font-pop">
-    <Category />
+    <Questions />
   </div>
 </template>
