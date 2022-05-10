@@ -1,20 +1,9 @@
-<template>
-  <div>
-    <!-- <div v-if="result" class="content" >
-      <p>Category: <span v-html="category"></span></p>
-      <p>Question: <span v-html="question"></span></p>
-      <p>Correct: <span v-html="correct_answer"></span></p>
-      <div v-for="answer in incorrect_answers" :key="answer">
-        <p>{{ answer }}</p>
-
-      </div>
-    </div> -->
-
-  </div>
-</template>
+<script setup>
+import axios from "axios";
+import Answers from "../components/Answers.vue";
+</script>
 
 <script>
-import axios from "axios";
 
 export default {
   data: () => ({
@@ -24,7 +13,6 @@ export default {
     correct_answer: String,
     incorrect_answers: Array,
     answers: Array,
-    answers_random: Array,
   }),
   created() {
     axios.get("https://opentdb.com/api.php?amount=1").then((result) => {
@@ -48,6 +36,14 @@ export default {
   
 
     })
-  }
+  },
+
+
 };
 </script>
+
+<template>
+<div v-for="answer in answers" :key="answer">
+  <Answers :answer="answer"/>
+</div>
+</template>
