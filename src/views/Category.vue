@@ -1,9 +1,13 @@
 <script setup>
-import SelectCategory from '../components/SelectCategory.vue'
-import Button from '../components/Button.vue'
+import SelectCategory from '../components/SelectCategory.vue';
+import Button from '../components/Button.vue';
+import Title from '../components/Title.vue';
 </script>
 
 <template>
+<div class="flex flex-col gap-2 p-10"> 
+    <Title /> 
+  </div>
   <div class="font-pop">
     <main class="flex flex-col gap-2 p-6">
       <SelectCategory name="science and nature" />

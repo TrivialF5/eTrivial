@@ -1,6 +1,7 @@
 <script setup>
 import axios from "axios";
 import Answers from "../components/Answers.vue";
+import Title from "../components/Title.vue";
 </script>
 
 <script>
@@ -14,6 +15,7 @@ export default {
     incorrect_answers: Array,
     answers: Array,
   }),
+
   created() {
     axios.get("https://opentdb.com/api.php?amount=1").then((result) => {
       // console.log(result.data);
@@ -33,17 +35,19 @@ export default {
       this.answers.splice(Math.floor(Math.random()*(this.answers.length + 1)), 0, this.correct_answer ); 
 
       //console.log(this.answers);
-  
-
     })
   },
-
-
-};
+}
 </script>
 
+
+
 <template>
-<div v-for="answer in answers" :key="answer">
-  <Answers :answer="answer"/>
-</div>
+  <div class="flex flex-col gap-2 p-10"> 
+    <Title /> 
+  </div>
+  <p v-html="question" class="flex self-center justify-center p-10 text-lg font-semibold font-p"></p>
+  <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer">
+    <Answers :answer="answer" :id="$route.params.id"/>
+  </div>
 </template>
