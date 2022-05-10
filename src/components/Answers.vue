@@ -8,8 +8,8 @@
 <script>
 export default {
   props : {
-    answer: String,
-    id: String,
+    answer: '',
+    id: '',
   },
   computed: {
     classesBack() {

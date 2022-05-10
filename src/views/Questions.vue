@@ -9,9 +9,9 @@ import Title from "../components/Title.vue";
 export default {
   data: () => ({
     result: null,
-    category: String,
-    question: String,
-    correct_answer: String,
+    category: '',
+    question: '',
+    correct_answer: '',
     incorrect_answers: Array,
     answers: Array,
   }),

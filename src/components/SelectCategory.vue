@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{name: 'question'}">
+  <router-link :to="{name: 'question', params: {id: id} }">
     <div :class="mergeClassesBack">
       <div :class="mergeClassesFront">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +15,8 @@
 <script>
 export default {
   props: {
-    name: String,
+    name: '',
+    id: '',
   },
   computed: {
     classesBack() {

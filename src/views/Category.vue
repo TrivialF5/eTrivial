@@ -10,13 +10,13 @@ import Title from '../components/Title.vue';
   </div>
   <div class="font-pop">
     <main class="flex flex-col gap-2 p-6">
-      <SelectCategory name="science and nature" />
-      <SelectCategory name="history" />
-      <SelectCategory name="sports" />
-      <SelectCategory name="entertainment" />
-      <SelectCategory name="art and literature" />
-      <SelectCategory name="geography" />
-      <SelectCategory name="random" />
+      <SelectCategory id="17" name="science and nature" />
+      <SelectCategory id="23" name="history" />
+      <SelectCategory id="21" name="sports" />
+      <SelectCategory id="9" name="entertainment" />
+      <SelectCategory id="13" name="art and literature" />
+      <SelectCategory id="22" name="geography" />
+      <SelectCategory id="00" name="random" />
     </main>
     <footer class="fixed bottom-0 flex w-full justify-items-stretch">
       <Button :class="{'bg-red-500': easy}" @click="changeActive('easy')">easy</Button>
