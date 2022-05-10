@@ -5,7 +5,7 @@ import Title from '../components/Title.vue';
 </script>
 
 <template>
-<div class="flex flex-col gap-2 p-10"> 
+<div class="flex flex-col gap-2 p-2"> 
     <Title /> 
   </div>
   <div class="font-pop">

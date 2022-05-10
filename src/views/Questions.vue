@@ -43,10 +43,10 @@ export default {
 
 
 <template>
-  <div class="flex flex-col gap-2 p-10"> 
+  <div class="flex flex-col gap-2 p-2"> 
     <Title /> 
   </div>
-  <p v-html="question" class="flex self-center justify-center p-10 text-lg font-semibold font-p"></p>
+  <p v-html="question" class="flex self-center justify-center p-3 text-lg font-semibold font-p"></p>
   <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer">
     <Answers :answer="answer" :id="$route.params.id "/>
   </div>
