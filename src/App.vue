@@ -1,9 +1,9 @@
-<script setup>
-import Questions from './components/Questions.vue';
+<script>
+
 </script>
 
 <template>
   <div class="font-pop">
-    <Questions />
+    <router-view></router-view>
   </div>
 </template>
