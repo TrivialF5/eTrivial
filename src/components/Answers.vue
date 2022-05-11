@@ -43,7 +43,7 @@ export default {
                   : 'bg-gray-500'
     },
     mergeClassesBack() {
-      return `flex h-24 w-86 rounded-md border-2 bg-emerald-300 font-pop ${this.classesBack}`;
+      return `flex h-20 w-86 rounded-md border-2 bg-emerald-300 font-pop overflow-hidden ${this.classesBack}`;
     },
     mergeClassesFront() {
       return `h-22 w-5 rounded-tl-sm rounded-bl-sm ${this.classesFront}`;

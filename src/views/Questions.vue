@@ -1,7 +1,6 @@
 <script setup>
 import axios from "axios";
 import Answers from "../components/Answers.vue";
-import Title from "../components/Title.vue";
 </script>
 
 <script>
@@ -47,9 +46,6 @@ export default {
 
 
 <template>
-  <div class="flex flex-col gap-2 p-2"> 
-    <Title /> 
-  </div>
   <p v-html="question" class="flex self-center justify-center p-3 text-lg font-semibold font-p"></p>
   <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer">
     <Answers :answer="answer" :id="$route.params.id "/>
