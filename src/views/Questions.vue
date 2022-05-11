@@ -17,7 +17,7 @@ export default {
   }),
 
   created() {
-    axios.get("https://opentdb.com/api.php?amount=1").then((result) => {
+    axios.get(`https://opentdb.com/api.php?amount=1&category=${this.$route.params.id}&difficulty=${this.$route.params.difficulty}&type=multiple`).then((result) => {
       // console.log(result.data);
       this.result = result.data;
       this.category = result.data.results[0].category;
