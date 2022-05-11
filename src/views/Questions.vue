@@ -17,8 +17,15 @@ export default {
   }),
 
   created() {
-    axios.get(`https://opentdb.com/api.php?amount=1&category=${this.$route.params.id}&difficulty=${this.$route.params.difficulty}&type=multiple`).then((result) => {
-      // console.log(result.data);
+    let axiosVar;
+
+    if (this.$route.params.id == "00") {
+      axiosVar = axios.get(`https://opentdb.com/api.php?amount=1&difficulty=${this.$route.params.difficulty}&type=multiple`);
+    } else {
+      axiosVar = axios.get(`https://opentdb.com/api.php?amount=1&category=${this.$route.params.id}&difficulty=${this.$route.params.difficulty}&type=multiple`);
+    }
+    axiosVar.then((result) => {
+     
       this.result = result.data;
       this.category = result.data.results[0].category;
       this.question = result.data.results[0].question;
@@ -29,14 +36,11 @@ export default {
       for(let i=0; i<this.incorrect_answers.length; i++) {
         this.answers.push(this.incorrect_answers[i]);
       }
-      //console.log(this.answers);
-      //console.log(this.correct_answer);
 
       this.answers.splice(Math.floor(Math.random()*(this.answers.length + 1)), 0, this.correct_answer ); 
-
-      //console.log(this.answers);
     })
   },
+
 }
 </script>
 
