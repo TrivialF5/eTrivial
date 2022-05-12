@@ -24,7 +24,7 @@ import Button from '../components/Button.vue';
 export default {
   data() {
     return {
-      difficulty: 'easy',
+      difficulty: 'medium',
       easy: true,
       medium: false,
       hard: false,
@@ -38,6 +38,19 @@ export default {
       
       this.difficulty = select
     }
-  }
+  },
+  created(){
+    if (localStorage.getItem('difficulty')) {
+      this.difficulty = localStorage.getItem('difficulty');
+      this.changeActive(this.difficulty);
+    }
+  },
+  watch: {
+    difficulty: {
+      handler() {
+        localStorage.setItem('difficulty', this.difficulty);
+      }
+    },
+  },
 }
 </script>
