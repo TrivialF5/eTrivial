@@ -55,9 +55,11 @@ export default {
 </script>
 
 <template>
-  <p v-if="show" v-html="question" class="flex self-center justify-center p-3 text-lg font-semibold font-p"></p>
-  <p v-else class="flex self-center justify-center p-3 text-lg font-semibold font-p">{{ checked_answer }}</p>
-  <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer" @click="checkAnswer(answer)">
-    <Answers :answer="answer" :id="$route.params.id "/>
-  </div>
+  <main class="p-6">
+    <p v-if="show" v-html="question" class="flex self-center justify-center p-3 text-lg font-semibold font-p"></p>
+    <p v-else class="flex self-center justify-center p-3 text-lg font-semibold font-p">{{ checked_answer }}</p>
+    <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer" @click="checkAnswer(answer)">
+      <Answers :answer="answer" :id="$route.params.id "/>
+    </div>
+  </main>
 </template>

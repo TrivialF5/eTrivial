@@ -4,9 +4,9 @@ import Title from "./components/Title.vue";
 
 <template>
   <div class="font-pop">
-    <div class="flex flex-col gap-2 p-2"> 
+    <header class="flex flex-col gap-2 p-2"> 
       <Title /> 
-    </div>
+    </header>
     <router-view></router-view>
   </div>
 </template>
