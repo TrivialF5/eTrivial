@@ -4,7 +4,7 @@ import Button from '../components/Button.vue';
 </script>
 
 <template>
-  <main class="flex flex-col gap-2 p-6">
+  <main class="flex flex-col gap-2 p-6 pb-24">
     <SelectCategory id="17" :difficulty="difficulty" name="science and nature" />
     <SelectCategory id="23" :difficulty="difficulty" name="history" />
     <SelectCategory id="21" :difficulty="difficulty" name="sports" />
