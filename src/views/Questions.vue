@@ -51,6 +51,10 @@ export default {
       if (answer != this.correct_answer) {
         this.checked_answer = SvgIncorrect;
       }
+
+      setTimeout(() => {
+        this.$router.push("/");
+      }, 2000);
     }
   }
 }
