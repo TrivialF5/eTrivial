@@ -1,5 +1,6 @@
 <script setup>
 import axios from "axios";
+import he from "he/he";
 import Answers from "../components/Answers.vue";
 import SvgCorrect from "../assets/correct.svg";
 import SvgIncorrect from "../assets/incorrect.svg";
@@ -51,16 +52,19 @@ export default {
       if (answer != this.correct_answer) {
         this.checked_answer = SvgIncorrect;
       }
+      
+      this.correct_answer = this.correct_answer.trim();
+      this.correct_answer = he.decode(this.correct_answer);
 
       for(let i=0; i<this.answers.length; i++){
         if(this.$refs.answers[i].innerText == this.correct_answer){
           this.$refs.answers[i].children[0].classList.add('bg-green-300');
-          this.$refs.answers[i].children[0].classList.add('border-green-300');
+          this.$refs.answers[i].children[0].classList.add('border-green-500');
           
           this.$refs.answers[i].children[0].children[0].classList.add('bg-green-500');
         } else {
-          this.$refs.answers[i].children[0].classList.add("bg-red-300");
-          this.$refs.answers[i].children[0].classList.add("border-red-300");
+          this.$refs.answers[i].children[0].classList.add('bg-red-300');
+          this.$refs.answers[i].children[0].classList.add('border-red-500');
           
           this.$refs.answers[i].children[0].children[0].classList.add('bg-red-500');
         }
