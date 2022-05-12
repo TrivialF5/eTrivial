@@ -16,15 +16,14 @@ export default {
   }),
 
   created() {
-    let axiosVar;
-
     if (this.$route.params.id == "00") {
-      axiosVar = axios.get(`https://opentdb.com/api.php?amount=1&difficulty=${this.$route.params.difficulty}&type=multiple`);
-    } else {
-      axiosVar = axios.get(`https://opentdb.com/api.php?amount=1&category=${this.$route.params.id}&difficulty=${this.$route.params.difficulty}&type=multiple`);
-    }
-    axiosVar.then((result) => {
-     
+      let idArray = [17, 23, 21, 9, 13, 22];
+      let randomId = idArray.splice(Math.floor(Math.random()*idArray.length), 1)[0].toString();
+      this.$route.params.id = randomId;
+    } 
+    
+    axios.get(`https://opentdb.com/api.php?amount=1&category=${this.$route.params.id}&difficulty=${this.$route.params.difficulty}&type=multiple`).then((result) => {
+    
       this.result = result.data;
       this.category = result.data.results[0].category;
       this.question = result.data.results[0].question;
