@@ -67,7 +67,7 @@ export default {
       }
 
       setTimeout(() => {
-        this.$router.push("/");
+        this.$router.push("/category");
       }, 2000);
     }
   }
