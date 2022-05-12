@@ -43,13 +43,27 @@ export default {
   },
   methods: {
     checkAnswer(answer) {
-      this.show = !this.show;
+      this.show = false;
 
       if (answer == this.correct_answer) {
         this.checked_answer = SvgCorrect;
       }
       if (answer != this.correct_answer) {
         this.checked_answer = SvgIncorrect;
+      }
+
+      for(let i=0; i<this.answers.length; i++){
+        if(this.$refs.answers[i].innerText == this.correct_answer){
+          this.$refs.answers[i].children[0].classList.add('bg-green-300');
+          this.$refs.answers[i].children[0].classList.add('border-green-300');
+          
+          this.$refs.answers[i].children[0].children[0].classList.add('bg-green-500');
+        } else {
+          this.$refs.answers[i].children[0].classList.add("bg-red-300");
+          this.$refs.answers[i].children[0].classList.add("border-red-300");
+          
+          this.$refs.answers[i].children[0].children[0].classList.add('bg-red-500');
+        }
       }
 
       setTimeout(() => {
@@ -64,8 +78,8 @@ export default {
   <main class="p-6">
     <p v-if="show" v-html="question" class="flex items-center justify-center h-32 p-3 text-lg font-semibold font-p"></p>
     <img v-else :src="checked_answer" class="flex items-center justify-center h-32 p-3 mx-auto text-lg font-semibold font-p"/>
-    <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer" @click="checkAnswer(answer)">
-      <Answers :answer="answer" :id="$route.params.id "/>
+    <div class="flex flex-col gap-2 p-1 cursor-pointer" v-for="answer in answers" :key="answer" @click="checkAnswer(answer)" ref="answers">
+      <Answers :answer="answer" :id="$route.params.id"/>
     </div>
   </main>
 </template>
