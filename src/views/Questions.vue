@@ -1,6 +1,8 @@
 <script setup>
 import axios from "axios";
 import Answers from "../components/Answers.vue";
+import SvgCorrect from "../assets/correct.svg";
+import SvgIncorrect from "../assets/incorrect.svg";
 </script>
 
 <script>
@@ -14,7 +16,7 @@ export default {
     incorrect_answers: Array,
     answers: Array,
     show: true,
-    checked_answer: false,
+    checked_answer: SvgIncorrect
   }),
   created() {
     if (this.$route.params.id == "00") {
@@ -44,10 +46,10 @@ export default {
       this.show = !this.show;
 
       if (answer == this.correct_answer) {
-        this.checked_answer = true;
+        this.checked_answer = SvgCorrect;
       }
       if (answer != this.correct_answer) {
-        this.checked_answer = false;
+        this.checked_answer = SvgIncorrect;
       }
     }
   }
@@ -56,8 +58,8 @@ export default {
 
 <template>
   <main class="p-6">
-    <p v-if="show" v-html="question" class="flex self-center justify-center p-3 text-lg font-semibold font-p"></p>
-    <p v-else class="flex self-center justify-center p-3 text-lg font-semibold font-p">{{ checked_answer }}</p>
+    <p v-if="show" v-html="question" class="flex items-center justify-center h-32 p-3 text-lg font-semibold font-p"></p>
+    <img v-else :src="checked_answer" class="flex items-center justify-center h-32 p-3 mx-auto text-lg font-semibold font-p"/>
     <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer" @click="checkAnswer(answer)">
       <Answers :answer="answer" :id="$route.params.id "/>
     </div>
