@@ -13,8 +13,9 @@ export default {
     correct_answer: '',
     incorrect_answers: Array,
     answers: Array,
+    show: true,
+    checked_answer: false,
   }),
-
   created() {
     if (this.$route.params.id == "00") {
       let idArray = [17, 23, 21, 9, 13, 22];
@@ -38,15 +39,25 @@ export default {
       this.answers.splice(Math.floor(Math.random()*(this.answers.length + 1)), 0, this.correct_answer ); 
     })
   },
+  methods: {
+    checkAnswer(answer) {
+      this.show = !this.show;
 
+      if (answer == this.correct_answer) {
+        this.checked_answer = true;
+      }
+      if (answer != this.correct_answer) {
+        this.checked_answer = false;
+      }
+    }
+  }
 }
 </script>
 
-
-
 <template>
-  <p v-html="question" class="flex self-center justify-center p-3 text-lg font-semibold font-p"></p>
-  <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer">
+  <p v-if="show" v-html="question" class="flex self-center justify-center p-3 text-lg font-semibold font-p"></p>
+  <p v-else class="flex self-center justify-center p-3 text-lg font-semibold font-p">{{ checked_answer }}</p>
+  <div class="flex flex-col gap-2 p-1" v-for="answer in answers" :key="answer" @click="checkAnswer(answer)">
     <Answers :answer="answer" :id="$route.params.id "/>
   </div>
 </template>
