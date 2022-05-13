@@ -4,7 +4,7 @@ Accompaniment of the board game in a mobile version, made in Vue3, digitizing th
 
 In the following link you can see or test the project:
 
-#https://etrivial.netlify.app/
+# https://etrivial.netlify.app/
 
 # For project installation:
 
@@ -129,7 +129,7 @@ export default {
 
 
 
-###developer team
+### Developer team
 -[Scarlet ](https://github.com/skyrosa "Scarlet ")
 -[Ales](https://github.com/aleswebgit "Ales")
 -[Álex ](https://github.com/ginkgob "Álex ")
