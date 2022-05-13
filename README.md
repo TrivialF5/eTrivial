@@ -8,7 +8,7 @@ In the following link you can see or test the project:
 
 # For project installation:
 
-###1. Install node.js & npm package
+### 1. Install node.js & npm package
 
 The first step is to install Node.js & NPM (Node Package Manager) to your computer.
 
@@ -42,7 +42,7 @@ Then Agree and install, which will ask for the admin password. Once the password
 
 The next step is to install Vue.js.
 
-###2. Install Vue.js(3)
+### 2. Install Vue.js(3)
 
 To create a build-tool-enabled Vue project on your machine, run the following command in your command line (without the > sign):
 
@@ -79,7 +79,7 @@ If you are unsure about an option, simply choose No by hitting enter for now. On
 
 `> npm run dev`
 
-###3. Install Tailwind
+### 3. Install Tailwind
 
  -Installation of Tailwind is needed for the correct visualization of the web.
 
@@ -103,7 +103,7 @@ Run the CLI tool to scan the template files for classes and build the CSS.
 
 For more information click [here](https://tailwindcss.com/docs/installation).
 
-###4.  GET API requests with Axios
+### 4.  GET API requests with Axios
 
 you will need the link for the trivial API: 
 
