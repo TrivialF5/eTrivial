@@ -139,6 +139,6 @@ export default {
 - In this verson you can view which awnsers are incorrect and which one is the correct. It's not working in Safari browser. We're working on that for the next generation of our app.
 
 
-TANKS
+THANKS
 
 To Factory F5 and our promotion partners <3
