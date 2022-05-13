@@ -79,7 +79,7 @@ If you are unsure about an option, simply choose No by hitting enter for now. On
 
 `> npm run dev`
 
-###4. Install Tailwind
+###3. Install Tailwind
 
  -Installation of Tailwind is needed for the correct visualization of the web.
 
@@ -103,7 +103,7 @@ Run the CLI tool to scan the template files for classes and build the CSS.
 
 For more information click [here](https://tailwindcss.com/docs/installation).
 
-###3.  GET API requests with Axios
+###4.  GET API requests with Axios
 
 you will need the link for the trivial API: 
 
