@@ -130,11 +130,15 @@ export default {
 
 
 ### Developer team
--[Scarlet ](https://github.com/skyrosa "Scarlet ")
--[Ales](https://github.com/aleswebgit "Ales")
--[Álex ](https://github.com/ginkgob "Álex ")
--[Dani](https://github.com/LvL090 "Daniel calvo")
+- [Scarlet ](https://github.com/skyrosa "Scarlet ")
+- [Ales](https://github.com/aleswebgit "Ales")
+- [Álex ](https://github.com/ginkgob "Álex ")
+- [Dani](https://github.com/LvL090 "Daniel calvo")
 
-THANKS
+### What's next?
+- In this verson you can view which awnsers are incorrect and which one is the correct. It's not working in Safari browser. We're working on that for the next generation of our app.
+
+
+TANKS
 
 To Factory F5 and our promotion partners <3
