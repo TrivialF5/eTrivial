@@ -6,7 +6,7 @@ In the following link you can see or test the project:
 
 #https://etrivial.netlify.app/
 
-# for project installation:
+# For project installation:
 
 ###1. Install node.js & npm package
 
@@ -78,6 +78,30 @@ If you are unsure about an option, simply choose No by hitting enter for now. On
 `> npm install`
 
 `> npm run dev`
+
+###4. Install Tailwind
+
+ -Installation of Tailwind is needed for the correct visualization of the web.
+
+`npm install -D tailwindcss`
+`npx tailwindcss init`
+
+ - Configure the template paths
+
+Add the paths to all of the template files in tailwind.config.js file.
+
+- Add the Tailwind directives to the CSS
+
+Add the @tailwind directives for each of Tailwind’s layers to your main CSS file
+`@tailwind base;`
+`@tailwind components;`
+`@tailwind utilities;`
+
+ - Start the Tailwind CLI build process
+
+Run the CLI tool to scan the template files for classes and build the CSS.
+
+For more information click [here](https://tailwindcss.com/docs/installation).
 
 ###3.  GET API requests with Axios
 
